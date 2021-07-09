@@ -18,6 +18,7 @@ public abstract class TutorialSection extends MethodProvider {
     public abstract void onLoop() throws InterruptedException;
 
     protected final int getProgress() {
+        log(getConfigs().get(281));
         return getConfigs().get(281);
     }
 

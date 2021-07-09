@@ -67,6 +67,15 @@ public final class RuneScapeGuideSection extends TutorialSection {
 
         switch (getProgress()) {
             case 0:
+                if(getWidgets().get(558,9) != null){
+                    getKeyboard().typeString("a",true);
+                    getWidgets().get(558,15).interact();
+                    getWidgets().get(558,19,0).interact();
+
+                }
+//                if(){
+//
+//                }
             case 1:
             case 2:
                 if (chooseDisplayNameWidget.isVisible(getWidgets())) {
@@ -166,7 +175,7 @@ public final class RuneScapeGuideSection extends TutorialSection {
             }
         }
 
-        if (getWidgets().getWidgetContainingText("Accept").interact()) {
+        if (getWidgets().getWidgetContainingText("Confirm").interact()) {
             Sleep.sleepUntil(() -> !creationScreenWidget.isVisible(getWidgets()), 3000, 600);
         }
     }
